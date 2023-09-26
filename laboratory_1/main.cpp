@@ -33,7 +33,7 @@ int main() {
         }
 
         if (i < 20) {
-            y = i * .3 + (1 / i);
+            y = i * .3 + (1.0 / i);
         }
         else {
             y = sqrt(i * i + 3 * i) / .7;
