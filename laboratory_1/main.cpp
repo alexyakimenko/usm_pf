@@ -4,8 +4,8 @@
 
 using namespace std;
 
-void renderCell(double a, double b) {
-    if (b == NULL) {
+void renderCell(double a, double b, bool impossible = false) {
+    if (impossible) {
         cout << "\\" << setw(10) << a << " #" << setw(10) << "null" << " /" << endl;
     } else {
         cout << "\\" << setw(10) << a << " #" << setw(10) << b << " /" << endl;
@@ -28,7 +28,7 @@ int main() {
     for (int i = start; i <= end; i += step) {
         double y;
         if (i == 0) {
-            renderCell(i, NULL);
+            renderCell(i, 0, true);
             continue;
         }
 
