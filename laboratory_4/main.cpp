@@ -18,7 +18,7 @@ void multiply(int* vec, int* matrix, int* result, int m, int n) {
   for(int i=0; i < n; i++) {
     sum = 0;
     for(int j=0; j < m; j++) {
-      sum += *(vec + j) * *(matrix + i + j*m);
+      sum += *(vec + j) * *(matrix + i + j*n);
     }
     *(result + i) = sum;
   }
@@ -31,7 +31,7 @@ void input_2d(int *arr, int m, int n) {
       }
     }
 }
- 
+
 int main()
 {
   int m, n;
@@ -46,10 +46,10 @@ int main()
   cout << "Define matrix: \n";
   input_2d((int*) matrix, m, n);
 
-  int result[m];
+  int result[n];
 
   multiply((int*) vec, (int*) matrix, (int*) result, m, n);
 
-  print_2d((int*) result, m, 1);
+  print_2d((int*) result, n, 1);
   return 0;
 }
