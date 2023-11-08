@@ -47,7 +47,8 @@ int main() {
   int result[n];
 
   multiply((int*) vec, (int*) matrix, (int*) result, m, n);
-
+  
+  cout << "Result: \n";
   print_2d((int*) result, n, 1);
   return 0;
 }
